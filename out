@@ -1,0 +1,131 @@
+[osu2782@mck-login1 lib]$ efc -c src3ft.f
+   external subroutine SRC3FT
+
+ ier=-1
+^
+Warning 4 at (22:src3ft.f) : Tab characters are an extension to standard Fortran 95
+
+20      continue
+        ^
+Comment 10 at (43:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+
+30      continue
+        ^
+Comment 10 at (49:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+
+40      continue
+        ^
+Comment 10 at (54:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+
+50      continue
+        ^
+Comment 10 at (63:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+
+60      continue
+        ^
+Comment 10 at (68:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+
+70      continue
+        ^
+Comment 10 at (75:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+   external subroutine REALFFT
+
+      real*4 data(n1,n2,n3),speq(2,n2,n3)
+           ^
+Warning 2 at (118:src3ft.f) : Type size specifiers are an extension to standard Fortran 95
+
+  do 11 i2=1,n2
+^
+Warning 4 at (130:src3ft.f) : Tab characters are an extension to standard Fortran 95
+
+   10 data(i,j,k) = data(i,j,k)*factor
+      ^
+Comment 9 at (146:src3ft.f) : Terminating a DO loop with a statement other than CONTINUE or ENDDO is obsolescent in Fortran 90 and Fortran 95
+      ^
+Comment 10 at (146:src3ft.f) : DO loops sharing the same terminating statement is obsolescent in Fortran 90 and Fortran 95
+Comment 1 : In program unit REALFFT label 20 is not referenced
+   external subroutine CXFFT3
+
+   10 call cfft99(cx(1,1,k),cw,trig(ltrigx),ifax,1,mx,mx,my,isign)
+      ^
+Comment 9 at (236:src3ft.f) : Terminating a DO loop with a statement other than CONTINUE or ENDDO is obsolescent in Fortran 90 and Fortran 95
+
+   20 call cfft99(cx(1,1,k),cw,trig(ltrigy),ifay,mx,1,my,mx,isign)
+      ^
+Comment 9 at (238:src3ft.f) : Terminating a DO loop with a statement other than CONTINUE or ENDDO is obsolescent in Fortran 90 and Fortran 95
+
+   30 call cfft99(cx(1,j,1),cw,trig(ltrigz),ifaz,mx*my,1,mz,mx,isign)
+      ^
+Comment 9 at (240:src3ft.f) : Terminating a DO loop with a statement other than CONTINUE or ENDDO is obsolescent in Fortran 90 and Fortran 95
+   external subroutine CFFT99
+
+cdir$ ivdep
+ ^
+Warning 84 at (530:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (554:src3ft.f) : This directive is an extension to standard Fortran 95
+Comment 1 : In program unit CFFT99 label 110 is not referenced
+   external subroutine CFTFAX
+
+   write(0,*) 'FFT: error in array dimensions'
+^
+Warning 4 at (594:src3ft.f) : Tab characters are an extension to standard Fortran 95
+   external subroutine FACT
+   external subroutine CFTRIG
+   external subroutine VPASSM
+
+      data sin36/0.587785252292473/,cos36/0.809016994374947/,
+                 ^
+Warning 101 at (667:src3ft.f) : Constant truncated -- precision too great
+                                          ^
+Warning 101 at (667:src3ft.f) : Constant truncated -- precision too great
+
+     *     sin72/0.951056516295154/,cos72/0.309016994374947/,
+                 ^
+Warning 101 at (668:src3ft.f) : Constant truncated -- precision too great
+                                          ^
+Warning 101 at (668:src3ft.f) : Constant truncated -- precision too great
+
+     *     sin60/0.866025403784437/
+                 ^
+Warning 101 at (669:src3ft.f) : Constant truncated -- precision too great
+
+      go to (10,50,90,130),igo
+      ^
+Comment 14 at (679:src3ft.f) : The computed GOTO statement is obsolescent in Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (689:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (711:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (737:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (764:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (802:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (834:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (880:src3ft.f) : This directive is an extension to standard Fortran 95
+
+cdir$ ivdep
+ ^
+Warning 84 at (925:src3ft.f) : This directive is an extension to standard Fortran 95
+
+979 Lines Compiled

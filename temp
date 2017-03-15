@@ -1,0 +1,29 @@
+CC=pgcc
+CLINK=pgcc
+CFLAGS=-fast
+
+# These are for the ia64 cluster(s)
+FC= ifc
+CC= icc
+FLINK= ifc
+CLINK= icc
+CFLAGS= $(FFTW_CFLAGS)
+FFLAGS= -ftz -mp1 -posixlib -Vaxlib $(FFTW_FFLAGS)
+FLIB= -L$(hd)/cosmo/lib_64 -lfutil -lcutil $(FFTW_LIBS)
+CLIB= -L$(hd)/cosmo/lib_64 -lcutil -lfutil -lm $(FFTW_LIBS)
+XDIR= $(HOME)/cosmo/exec
+
+hd= ${HOME}
+
+
+f0d=${HOME}/cosmo/lib_64
+
+OBJS0=	fftw3d.o fftw2d.o fftw3d_f77_.o
+lib:	$(OBJS0) 
+	ar rcv libfftw3d.a $(OBJS0)
+	mv libfftw3d.a $(f0d)
+
+OBJS1=	mkwisdom.o
+mkwisdom:	$(OBJS1)
+	$(CLINK) $(CFLAGS) -o mkwisdom $(OBJS1) $(CLIB)
+
